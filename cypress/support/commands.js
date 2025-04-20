@@ -8,23 +8,6 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 
-// -- This is a parent command --
-Cypress.Commands.add('login', (username, password) => {
-    cy.visit('https://practicetestautomation.com/practice-test-login/')
-    cy.get('#username').type(username)
-    cy.get('#password').type(password)
-    cy.get('#submit').click()
-})
-
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
 // Custom command to wait for an element to be visible
 Cypress.Commands.add('waitForElement', (selector, timeout = 10000) => {
     cy.get(selector, { timeout }).should('be.visible')

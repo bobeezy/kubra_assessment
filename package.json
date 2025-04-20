@@ -1,0 +1,44 @@
+{
+  "name": "kubra_assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "cypress run",
+    "test:report": "cypress run && npm run report",
+    "report": "node cypress/support/generate-report.js",
+    "test:api": "cypress run --spec \"cypress/e2e/specs/api/**/*.cy.js\" && npm run report",
+    "test:web": "cypress run --spec \"cypress/e2e/specs/web/**/*.cy.js\" && npm run report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^1.6.0",
+    "@cypress/grep": "^4.1.0",
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^13.14.1",
+    "cypress-browser-extension-plugin": "^0.1.0",
+    "cypress-file-upload": "^5.0.5",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "cypress-get-table": "^1.0.1",
+    "cypress-grep": "^3.0.4",
+    "cypress-plugin-api": "^2.10.3",
+    "dotenv": "^16.4.5",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.21",
+    "mocha": "^10.1.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.0",
+    "redash": "^0.23.0",
+    "save": "^2.9.0"
+  }
+}
